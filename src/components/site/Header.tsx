@@ -40,11 +40,11 @@ export function Header() {
 
       {open && (
         <nav className="max-h-[calc(100vh-3.5rem)] overflow-y-auto bg-card text-card-foreground">
-          <MenuLink to="/" onClick={() => setOpen(false)}>Home</MenuLink>
-          <MenuLink to="/categories" onClick={() => setOpen(false)}>Shop All Products</MenuLink>
-          <MenuLink to="/blog" onClick={() => setOpen(false)}>Blog</MenuLink>
-          <MenuLink to="/store" onClick={() => setOpen(false)}>Visit Our Store</MenuLink>
-          <MenuLink to="/contact" onClick={() => setOpen(false)}>Let's Connect</MenuLink>
+          <Link to="/" onClick={() => setOpen(false)} className={menuItemClass}>Home</Link>
+          <Link to="/categories" onClick={() => setOpen(false)} className={menuItemClass}>Shop All Products</Link>
+          <Link to="/blog" onClick={() => setOpen(false)} className={menuItemClass}>Blog</Link>
+          <Link to="/store" onClick={() => setOpen(false)} className={menuItemClass}>Visit Our Store</Link>
+          <Link to="/contact" onClick={() => setOpen(false)} className={menuItemClass}>Let's Connect</Link>
           <a
             href={`tel:${business.phone}`}
             className="flex items-center gap-3 border-b border-border px-4 py-4 text-base"
