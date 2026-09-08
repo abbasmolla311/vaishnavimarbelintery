@@ -3,7 +3,7 @@ import { Layout } from "@/components/site/Layout";
 import { OrderForm } from "@/components/site/OrderForm";
 import { business } from "@/lib/site";
 
-type OrderSearch = { product?: string };
+type OrderSearch = { product: string | undefined };
 
 export const Route = createFileRoute("/order")({
   validateSearch: (search: Record<string, unknown>): OrderSearch => ({

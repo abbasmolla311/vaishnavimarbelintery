@@ -36,19 +36,31 @@ function Categories() {
       </div>
 
       <section className="mx-auto max-w-6xl px-4 py-8">
-        <h2 className="text-lg font-bold">Popular Right Now</h2>
-        <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {categories.map((c) => (
-            <div key={c.name}>
+        <h2 className="text-lg font-bold">Our Products</h2>
+        <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
+          {products.map((p) => (
+            <div key={p.name} className="overflow-hidden rounded-xl bg-card shadow-sm">
               <img
-                src={c.image}
-                alt={c.name}
+                src={p.image}
+                alt={`${p.name} — ${p.size}`}
                 loading="lazy"
-                width={800}
-                height={800}
-                className="aspect-square w-full rounded-xl object-cover"
+                width={768}
+                height={768}
+                className="aspect-square w-full object-cover"
               />
-              <p className="mt-2 text-center text-sm font-medium">{c.name}</p>
+              <div className="p-3">
+                <p className="text-xs uppercase tracking-wide text-muted-foreground">{p.category}</p>
+                <h3 className="mt-1 text-sm font-semibold leading-snug">{p.name}</h3>
+                <p className="mt-1 text-xs text-muted-foreground">Size: {p.size}</p>
+                <p className="mt-1 text-base font-bold text-primary">{p.price}</p>
+                <Link
+                  to="/order"
+                  search={{ product: p.name }}
+                  className="mt-3 block rounded-md bg-primary py-2 text-center text-sm font-semibold text-primary-foreground"
+                >
+                  Buy Now
+                </Link>
+              </div>
             </div>
           ))}
         </div>
