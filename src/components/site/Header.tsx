@@ -3,6 +3,8 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X, Search, Camera, Heart, ShoppingBag, ChevronDown, Phone } from "lucide-react";
 import { business, navGroups } from "@/lib/site";
 
+const menuItemClass = "block border-b border-border px-4 py-4 text-base";
+
 export function Header() {
   const [open, setOpen] = useState(false);
   const [expanded, setExpanded] = useState<string | null>(null);
