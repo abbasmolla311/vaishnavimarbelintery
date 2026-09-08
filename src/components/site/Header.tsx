@@ -95,24 +95,3 @@ export function Header() {
     </header>
   );
 }
-
-function MenuLink({
-  to,
-  children,
-  onClick,
-}: {
-  to: string;
-  children: React.ReactNode;
-  onClick: () => void;
-}) {
-  return (
-    <Link
-      to={to}
-      onClick={onClick}
-      className="block border-b border-border px-4 py-4 text-base"
-      activeProps={{ className: "block border-b border-border px-4 py-4 text-base text-primary font-semibold" }}
-    >
-      {children}
-    </Link>
-  );
-}
