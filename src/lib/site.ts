@@ -5,6 +5,15 @@ import catWood from "@/assets/cat-wood.jpg";
 import blogKitchen from "@/assets/blog-kitchen.jpg";
 import blogLiving from "@/assets/blog-living.jpg";
 import blogOutdoor from "@/assets/blog-outdoor.jpg";
+import pStatuario from "@/assets/p-statuario.jpg";
+import pMakrana from "@/assets/p-makrana.jpg";
+import pOnyx from "@/assets/p-onyx.jpg";
+import pGranite from "@/assets/p-granite.jpg";
+import pVitrified from "@/assets/p-vitrified.jpg";
+import pAntiskid from "@/assets/p-antiskid.jpg";
+import logo from "@/assets/logo.png";
+
+export const brandLogo = logo;
 
 export const business = {
   name: "Vaishnavi Marble",
@@ -80,6 +89,59 @@ export const categories = [
   { name: "Vitrified Tiles", image: catVitrified },
   { name: "Bathroom Tiles", image: catBathroom },
   { name: "Wood Finish Tiles", image: catWood },
+];
+
+export type Product = {
+  name: string;
+  category: string;
+  size: string;
+  price: string;
+  image: string;
+};
+
+export const products: Product[] = [
+  {
+    name: "Statuario Italian Marble",
+    category: "Italian Marble",
+    size: "1200 x 2400 mm slab",
+    price: "₹350 / sq ft",
+    image: pStatuario,
+  },
+  {
+    name: "Makrana White Marble",
+    category: "Indian Marble",
+    size: "600 x 1200 mm",
+    price: "₹185 / sq ft",
+    image: pMakrana,
+  },
+  {
+    name: "Honey Onyx Marble",
+    category: "Onyx Marble",
+    size: "800 x 1600 mm slab",
+    price: "₹620 / sq ft",
+    image: pOnyx,
+  },
+  {
+    name: "Black Galaxy Granite",
+    category: "Granite",
+    size: "600 x 1800 mm slab",
+    price: "₹240 / sq ft",
+    image: pGranite,
+  },
+  {
+    name: "Beige Glazed Vitrified Tile",
+    category: "Floor Tiles",
+    size: "800 x 800 mm",
+    price: "₹78 / sq ft",
+    image: pVitrified,
+  },
+  {
+    name: "Grey Anti-Skid Parking Tile",
+    category: "Outdoor & Parking",
+    size: "300 x 300 mm",
+    price: "₹52 / sq ft",
+    image: pAntiskid,
+  },
 ];
 
 export type BlogPost = {
