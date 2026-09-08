@@ -1,6 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
-import { categories, navGroups, whatsappLink } from "@/lib/site";
+import { navGroups, products, whatsappLink } from "@/lib/site";
 
 export const Route = createFileRoute("/categories")({
   head: () => ({
