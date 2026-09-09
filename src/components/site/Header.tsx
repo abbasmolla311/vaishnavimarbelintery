@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, Search, Camera, Heart, ShoppingBag, ChevronDown, Phone } from "lucide-react";
-import { business, navGroups } from "@/lib/site";
+import { brandLogo, business, navGroups } from "@/lib/site";
 
 const menuItemClass = "block border-b border-border px-4 py-4 text-base";
 
@@ -21,7 +21,13 @@ export function Header() {
         </button>
 
         <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="text-xl font-extrabold tracking-tight text-primary">VM</span>
+          <img
+            src={brandLogo}
+            alt="Vaishnavi Marble logo"
+            width={40}
+            height={40}
+            className="h-9 w-9 rounded-md object-cover transition-transform duration-300 hover:scale-110"
+          />
           <span className="hidden text-sm font-semibold sm:inline">Vaishnavi Marble</span>
         </Link>
 
@@ -41,7 +47,7 @@ export function Header() {
       </div>
 
       {open && (
-        <nav className="max-h-[calc(100vh-3.5rem)] overflow-y-auto bg-card text-card-foreground">
+        <nav className="max-h-[calc(100vh-3.5rem)] animate-fade-up overflow-y-auto bg-card text-card-foreground">
           <Link to="/" onClick={() => setOpen(false)} className={menuItemClass}>Home</Link>
           <Link to="/categories" onClick={() => setOpen(false)} className={menuItemClass}>Shop All Products</Link>
           <Link to="/blog" onClick={() => setOpen(false)} className={menuItemClass}>Blog</Link>

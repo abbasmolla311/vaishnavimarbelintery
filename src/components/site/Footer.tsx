@@ -1,12 +1,19 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Phone, MapPin } from "lucide-react";
-import { business } from "@/lib/site";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import { brandLogo, business } from "@/lib/site";
 import { SocialIcons } from "./SocialIcons";
 
 export function Footer() {
   return (
     <footer className="bg-navy text-navy-foreground">
       <div className="mx-auto max-w-6xl px-4 py-10">
+        <img
+          src={brandLogo}
+          alt="Vaishnavi Marble logo"
+          width={64}
+          height={64}
+          className="mb-5 h-14 w-14 rounded-md object-cover"
+        />
         <h2 className="text-lg font-bold">Visit Us</h2>
         <p className="mt-2 text-sm text-navy-foreground/70">{business.name}</p>
         <p className="mt-2 flex gap-2 text-sm leading-relaxed text-navy-foreground/70">
@@ -31,6 +38,22 @@ export function Footer() {
         >
           <Phone size={18} className="text-primary" />
           {business.phoneDisplay}
+        </a>
+        <a
+          href={`tel:${business.phoneAlt}`}
+          className="mt-2 flex items-center gap-3 text-sm text-navy-foreground/80"
+        >
+          <Phone size={18} className="text-primary" />
+          {business.phoneAltDisplay}
+        </a>
+        <a
+          href={whatsappLink()}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-2 flex items-center gap-3 text-sm text-navy-foreground/80"
+        >
+          <MessageCircle size={18} className="text-primary" />
+          WhatsApp {business.whatsappDisplay}
         </a>
 
         <h2 className="mt-8 text-lg font-bold">Showroom Timings</h2>
