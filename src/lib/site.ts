@@ -11,30 +11,35 @@ import pOnyx from "@/assets/p-onyx.jpg";
 import pGranite from "@/assets/p-granite.jpg";
 import pVitrified from "@/assets/p-vitrified.jpg";
 import pAntiskid from "@/assets/p-antiskid.jpg";
-import logo from "@/assets/logo.png";
+import logoAsset from "@/assets/logo.jpeg.asset.json";
+import ownerAsset from "@/assets/owner.png.asset.json";
 
-export const brandLogo = logo;
+export const brandLogo = logoAsset.url;
+export const ownerPhoto = ownerAsset.url;
 
 export const business = {
   name: "Vaishnavi Marble",
-  tagline: "Marble, Granite & Designer Tiles",
-  phone: "+919800000000",
-  phoneDisplay: "+91 98000 00000",
-  whatsapp: "919800000000",
-  email: "contact@vaishnavimarble.com",
+  tagline: "Beauty In Every Stone",
+  phone: "+919330300408",
+  phoneDisplay: "+91 93303 00408",
+  phoneAlt: "+919836344786",
+  phoneAltDisplay: "+91 98363 44786",
+  whatsapp: "917003948297",
+  whatsappDisplay: "+91 70039 48297",
+  email: "marblevaishnavi@gmail.com",
   address:
-    "Ground Floor, Sonartori Apartment, Kestopur, RGM-273, Thakdari Rd, Tarulia, Krishnapur, Kolkata, West Bengal 700102",
+    "Krishnapur Taruliya Main Road (near Chanchal Kumari Girls High School), Sonartari Apartment, P.S. New Town, Kolkata - 700102",
   timings: "10:00 AM - 8:00 PM (Open all days)",
   rating: 4.4,
   reviewCount: 164,
   mapQuery:
-    "Vaishnavi Marble, Thakdari Rd, Tarulia, Krishnapur, Kestopur, Kolkata",
+    "Vaishnavi Marble, Krishnapur Taruliya Main Road, Sonartari Apartment, New Town, Kolkata 700102",
   social: {
-    facebook: "https://facebook.com",
-    instagram: "https://instagram.com",
-    youtube: "https://youtube.com",
-    linkedin: "https://linkedin.com",
-    pinterest: "https://pinterest.com",
+    facebook: "https://www.facebook.com/share/r/1C3UknFSt3/",
+    instagram: "https://www.facebook.com/share/r/1C3UknFSt3/",
+    youtube: "https://www.facebook.com/share/r/1C3UknFSt3/",
+    linkedin: "https://www.facebook.com/share/r/1C3UknFSt3/",
+    pinterest: "https://www.facebook.com/share/r/1C3UknFSt3/",
   },
 };
 
