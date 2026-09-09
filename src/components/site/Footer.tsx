@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
-import { brandLogo, business } from "@/lib/site";
+import { brandLogo, business, whatsappLink } from "@/lib/site";
 import { SocialIcons } from "./SocialIcons";
 
 export function Footer() {
